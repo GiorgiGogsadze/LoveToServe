@@ -1,0 +1,114 @@
+.order-table__opener {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem 5rem;
+  border-radius: 500px;
+  border: #ff160c 3px solid;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+  transition: all 0.2s;
+}
+.order-table__opener:hover {
+  box-shadow: #252525 2px 2px 10px;
+}
+.order-table__opener:active {
+  box-shadow: none;
+}
+.order-table__opener-notification {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  top: -13%;
+  left: 4%;
+  background-color: #3e1fd9;
+  border-radius: 100%;
+}
+.order-table {
+  background: linear-gradient(135deg, #ed213a, #93291e);
+  border-radius: 5px;
+  width: 40rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  right: 2rem;
+  bottom: 7rem;
+  height: 0;
+  transition: height 1s;
+  z-index: 10;
+}
+.order-table::-webkit-scrollbar {
+  width: 8px;
+}
+.order-table::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+.order-table::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.order-table .order-list {
+  padding: 1rem;
+}
+.order-table .order-list__item {
+  position: relative;
+  border: #484041 2px solid;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: default;
+  margin-bottom: 1rem;
+}
+.order-table .order-list__item div {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33.3%;
+}
+.order-table .order-list__item div P {
+  font-size: 1.5rem;
+  font-family: "parizuli-bol";
+  margin-bottom: 0.5rem;
+  color: #f7cb15;
+}
+.order-table .order-list__item-remove {
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #eecfd4;
+  cursor: pointer;
+}
+.order-table .order-list__item-remove:hover {
+  color: #191923;
+}
+.order-table__message {
+  font-size: 2.5rem;
+  color: white;
+  margin: 1rem;
+}
+.order-table__end {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem 1rem 1rem;
+}
+.order-table__end p {
+  font-size: 2rem;
+  color: white;
+}
+.order-table__end p span {
+  font-size: 2.5rem;
+  color: #6b69e9;
+  font-weight: 1000;
+}
+.order-table__hidden {
+  height: 0;
+}
+.order-table__shown {
+  height: 80vh;
+}

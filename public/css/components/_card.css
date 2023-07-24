@@ -1,0 +1,295 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  transition: all 0.5s;
+  border-radius: 5px;
+  position: relative;
+  margin: 2.5rem;
+  width: 20rem;
+}
+.card img:not(.arrow_svg) {
+  width: 100%;
+  border-radius: 5px;
+  opacity: 0;
+  display: block;
+}
+.card__front,
+.card__back {
+  transition: all 0.5s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+}
+.card__front img:not(.arrow_svg),
+.card__back img:not(.arrow_svg) {
+  width: 100%;
+  border-radius: 5px;
+  opacity: 0;
+  display: block;
+}
+.card__front {
+  background-size: cover;
+  background-position: center;
+  transition: all 0.5s;
+  filter: brightness(90%);
+  cursor: pointer;
+}
+.card__front:hover {
+  filter: brightness(100%);
+}
+.card__front__name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6);
+}
+.card__front:hover .card__front__name {
+  animation: jumping-name 0.5s infinite;
+}
+.card__back {
+  transform: rotateY(180deg);
+}
+.card__back-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.card__back-content p:first-of-type {
+  font-size: 1.6rem;
+  font-weight: 1000;
+  margin: 1rem 0;
+}
+@media only screen and (max-width: 18.75em) {
+  .card__back-content p:first-of-type {
+    margin: 0.5rem 0;
+  }
+}
+.card__back-content p:not(:first-of-type) {
+  font-size: 1.5rem;
+  margin: 0.5rem auto;
+  font-weight: 400;
+  width: 80%;
+  text-align: start;
+  display: flex;
+  align-items: flex-start;
+  text-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 18.75em) {
+  .card__back-content p:not(:first-of-type) {
+    margin: 0.1rem 0;
+  }
+}
+.card__back-content p:not(:first-of-type)::before {
+  content: "";
+  display: inline-block;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  margin: 0.5rem 0.5rem 0 0;
+  flex-shrink: 0;
+}
+.card__back__name {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+@media only screen and (max-width: 18.75em) {
+  .card__back__name {
+    margin-top: 0.5rem;
+  }
+}
+.card__click {
+  transform: scale(0.9);
+  position: absolute;
+  width: 3rem !important;
+  opacity: 1 !important;
+  bottom: 1.5rem;
+  right: 1.5rem;
+}
+.card__front:hover .card__click {
+  animation: rise-click 0.5s infinite;
+}
+@keyframes rise-click {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes jumping-name {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+.card__front-0 .card__front__name {
+  background-image: linear-gradient(135deg, #f2994a, #f2c94c);
+  color: #000;
+}
+.card__front-1 .card__front__name {
+  background-image: linear-gradient(135deg, #f12711, #f5af19);
+  color: #000;
+}
+.card__front-2 .card__front__name {
+  background-image: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  color: #fff;
+}
+.card__front-3 .card__front__name {
+  background-image: linear-gradient(135deg, #dbe6f6, #c5796d);
+  color: #000;
+}
+.card__front-4 .card__front__name {
+  background-image: linear-gradient(135deg, #56ab2f, #a8e063);
+  color: #000;
+}
+.card__front-5 .card__front__name {
+  background-image: linear-gradient(135deg, #c31432, #240b36);
+  color: #fff;
+}
+.card__front-6 .card__front__name {
+  background-image: linear-gradient(135deg, #ee0979, #ff6a00);
+  color: #fff;
+}
+.card__front-7 .card__front__name {
+  background-image: linear-gradient(135deg, #be93c5, #7bc6cc);
+  color: #000;
+}
+.card__back-0 {
+  background-image: linear-gradient(135deg, #f2994a, #f2c94c);
+}
+.card__back-0 .card__back__name {
+  color: #61045f;
+}
+.card__back-0 p:first-of-type {
+  color: #000;
+}
+.card__back-0 p:not(:first-of-type) {
+  color: #000;
+}
+.card__back-0 p:not(:first-of-type)::before {
+  background-color: #61045f;
+}
+.card__back-1 {
+  background-image: linear-gradient(135deg, #f12711, #f5af19);
+}
+.card__back-1 .card__back__name {
+  color: #4d0909;
+}
+.card__back-1 p:first-of-type {
+  color: #000;
+}
+.card__back-1 p:not(:first-of-type) {
+  color: #000;
+}
+.card__back-1 p:not(:first-of-type)::before {
+  background-color: #4d0909;
+}
+.card__back-2 {
+  background-image: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+}
+.card__back-2 .card__back__name {
+  color: #ffc0cb;
+}
+.card__back-2 p:first-of-type {
+  color: #fff;
+}
+.card__back-2 p:not(:first-of-type) {
+  color: #fff;
+}
+.card__back-2 p:not(:first-of-type)::before {
+  background-color: #ffc0cb;
+}
+.card__back-3 {
+  background-image: linear-gradient(135deg, #dbe6f6, #c5796d);
+}
+.card__back-3 .card__back__name {
+  color: #6e260e;
+}
+.card__back-3 p:first-of-type {
+  color: #000;
+}
+.card__back-3 p:not(:first-of-type) {
+  color: #000;
+}
+.card__back-3 p:not(:first-of-type)::before {
+  background-color: #6e260e;
+}
+.card__back-4 {
+  background-image: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+.card__back-4 .card__back__name {
+  color: #702963;
+}
+.card__back-4 p:first-of-type {
+  color: #000;
+}
+.card__back-4 p:not(:first-of-type) {
+  color: #000;
+}
+.card__back-4 p:not(:first-of-type)::before {
+  background-color: #702963;
+}
+.card__back-5 {
+  background-image: linear-gradient(135deg, #c31432, #240b36);
+}
+.card__back-5 .card__back__name {
+  color: #d9bb1a;
+}
+.card__back-5 p:first-of-type {
+  color: #fff;
+}
+.card__back-5 p:not(:first-of-type) {
+  color: #fff;
+}
+.card__back-5 p:not(:first-of-type)::before {
+  background-color: #d9bb1a;
+}
+.card__back-6 {
+  background-image: linear-gradient(135deg, #ee0979, #ff6a00);
+}
+.card__back-6 .card__back__name {
+  color: #eadef0 ee;
+}
+.card__back-6 p:first-of-type {
+  color: #fff;
+}
+.card__back-6 p:not(:first-of-type) {
+  color: #fff;
+}
+.card__back-6 p:not(:first-of-type)::before {
+  background-color: #eadef0 ee;
+}
+.card__back-7 {
+  background-image: linear-gradient(135deg, #be93c5, #7bc6cc);
+}
+.card__back-7 .card__back__name {
+  color: #3751ac;
+}
+.card__back-7 p:first-of-type {
+  color: #000;
+}
+.card__back-7 p:not(:first-of-type) {
+  color: #000;
+}
+.card__back-7 p:not(:first-of-type)::before {
+  background-color: #3751ac;
+}

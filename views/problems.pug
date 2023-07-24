@@ -1,0 +1,12 @@
+extends adminPage
+
+block append head
+  script(defer, type='module' src='/admin/js/problemController.js')
+
+block append header
+  nav.header__nav
+      a.header__button(href='/admin/orders') შეკვეთები
+      button.header__active პრობლემები
+block content
+  .cards
+  

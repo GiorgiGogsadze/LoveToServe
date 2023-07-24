@@ -1,0 +1,18 @@
+@import "./base/_base.css";
+@import "./base/_typography.css";
+
+@import "./components/_button.css";
+@import "./components/_card.css";
+@import "./components/_table-input.css";
+@import "./components/_order-table.css";
+
+@import "./pages/_footer.css";
+@import "./pages/_header.css";
+@import "./pages/_home.css";
+
+@import "./popups/_popup-order.css";
+@import "./popups/_popup-thanks.css";
+@import "./popups/_popup-problem.css";
+@import "./popups/_popup-hamburger.css";
+@import "./popups/_popup-shawarma.css";
+@import "./popups/_popup-others.css";

@@ -1,0 +1,236 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title LoveToServe
+  link(rel='icon' type='image/x-icon' href='/img/favicon-32x32.png')
+  // google fonts
+  link(rel='preconnect' href='https://fonts.googleapis.com')
+  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+  link(href='https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap' rel='stylesheet')
+  // google fonts
+  link(rel='stylesheet' href='/css/main.css')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js', defer)
+  script(defer, type='module' src='/js/controller.js')
+header#header.header
+  .header__above
+    img.logo.header__logo(src='/img/main-logo.png' alt='web-page logo')
+    .header__text
+      h1.heading-1.header__heading--1 LoveToServe
+      br
+      h2.heading-2.header__heading--2
+        | ნუ დაელოდები მიმტანს, შეუკვეთე ახლავე
+    select#table.table-input(name='table' title='table')
+  nav.header__nav
+    ul.header__list
+  button.order-table__opener
+    span.order-table__opener-notification(style='display: none')
+    | ნახეთ შეკვეთა
+.home
+footer#footer.footer
+  .footer__above
+    img.logo.footer__logo(src='/img/main-logo.png' alt='logo')
+    p.footer__name LoveToServe
+  p.footer__copy
+    | &copy; საიტი ეკუთვნის გიორგი გოგსაძეს, ნებადართულია მისი გადაკეთება
+    | მხოლოდ იმ შემთხვევაში, თუ მიუთითებთ ავტორს.
+  .footer__down
+    .footer__problem
+      p.footer__problem__text პრობლემის შეტყობინება
+    .facebook
+      p.facebook__text დაგვიმეგობრდი ფეისბუქზე
+      a.facebook__link(href='https://www.facebook.com' target='_blank')
+        //
+          <svg viewBox="10 10 490 490" class="facebook__svg">
+          <title>facebook</title>
+          <use href="/img/icons/facebook.svg"></use>
+          </svg>
+        img.facebook__svg(src='/img/icons/facebook.svg')
+// see full popup
+.see-full.container
+  .selection-popup.popup
+// order popup
+.container
+  .popup.order-popup
+    //
+      <svg viewBox="0 0 352 512" class="popup__close">
+      <title>close</title>
+      <use href="/img/icons/close.svg"></use>
+      </svg>
+    img.popup__close(src='/img/icons/close.svg')
+    form.order__questions
+      .number-plate
+        label(for='Pnumber') რაოდენობა:
+        input#Pnumber(type='number' name='Pnumber' min='1' value='1' required='')
+      p.total-price
+        | ფასი:
+        span.total-price__number
+        |  ლარი
+      button.end-button
+        span შეკვეთებში დამატება
+// form-popup
+.container
+  .popup.form-popup
+    //
+      <svg viewBox="0 0 352 512" class="popup__close">
+      <title>close</title>
+      <use href="/img/icons/close.svg"></use>
+      </svg>
+    img.popup__close(src='/img/icons/close.svg')
+    h4.heading-4.form-popup__header პრობლემის შეტყობინება
+    form.form-popup__form(action='')
+      //- .form-popup__about
+      //-   input#name(type='text' name='name' placeholder='სახელი, გვარი' required='')
+      .form-popup__problems
+        p.form-popup__problem პრობლემის ხარისხი:
+        .form-popup__select
+          div
+            input#dop1.problem-level(type='radio' name='dop' value='საგანგაშო' required='')
+            label(for='dop1')
+              span
+              |  საგანგაშო
+          div
+            input#dop2.problem-level(type='radio' name='dop' value='საყურადღებო')
+            label(for='dop2')
+              span
+              |  საყურადღებო
+          div
+            input#dop3.problem-level(type='radio' name='dop' value='მცირე დისკომფორტის შემქმნელი')
+            label(for='dop3')
+              span
+              |  მცირე დისკომფორტის შემქმნელი
+      label.form-popup__fill(for='message') დაწერე პრობლემის შესახებ:
+      .text-and-btn
+        textarea#message(name='message' required='')
+        .form-button-cont
+          button.form-button(type='submit') გაგზავნა
+          .form-button__before
+// shawarma-ingredients
+.container
+  .popup.shawarma-ingredients-popup
+    //
+      <svg viewBox="0 0 352 512" class="popup__close">
+      <title>close</title>
+      <use href="/img/icons/close.svg"></use>
+      </svg>
+    img.popup__close(src='/img/icons/close.svg')
+    .shawarma-ingredients
+      .shawarma-ingredients__picture
+        img.shawarma-ingredients__img-shawarma(src='/img/opens/open-shawarma/shawarma.png' alt='shawarma')
+        img.shawarma-ingredients__img-cucumber(src='/img/opens/open-shawarma/shawarma-cucumber.png' alt='კიტრი')
+        img.shawarma-ingredients__img-ketchup(src='/img/opens/open-shawarma/shawarma-ketchup.png' alt='კეტჩუპი')
+        img.shawarma-ingredients__img-mustard(src='/img/opens/open-shawarma/shawarma-mustard.png' alt='მდოგვი')
+        img.shawarma-ingredients__img-onion(src='/img/opens/open-shawarma/shawarma-onion.png' alt='ხახვი')
+        img.shawarma-ingredients__img-pepper(src='/img/opens/open-shawarma/shawarma-pepper.png' alt='წიწაკა')
+        img.shawarma-ingredients__img-salad(src='/img/opens/open-shawarma/shawarma-salad.png' alt='სალათის ფურცელი')
+        img.shawarma-ingredients__img-tomato(src='/img/opens/open-shawarma/shawarma-tomato.png' alt='პამიდორი')
+      form.shawarma-ingredients__inputs
+        div
+          input#shw-chk-1(type='checkbox' name='shawarma-ingredients-checkbox' data-tag='წიწაკა')
+          label(for='shw-chk-1')
+            span
+            | წიწაკა
+          br
+          input#shw-chk-2(type='checkbox' name='shawarma-ingredients-checkbox' data-tag='კიტრი')
+          label(for='shw-chk-2')
+            span
+            | კიტრი
+          br
+          input#shw-chk-3(type='checkbox' name='shawarma-ingredients-checkbox' data-tag='კეტჩუპი')
+          label(for='shw-chk-3')
+            span
+            | კეტჩუპი
+          br
+          input#shw-chk-4(type='checkbox' name='shawarma-ingredients-checkbox' data-tag='მდოგვი')
+          label(for='shw-chk-4')
+            span
+            | მდოგვი
+          br
+        div
+          input#shw-chk-5(type='checkbox' name='shawarma-ingredients-checkbox' data-tag='ხახვი')
+          label(for='shw-chk-5')
+            span
+            | ხახვი
+          br
+          input#shw-chk-6(type='checkbox' name='shawarma-ingredients-checkbox' data-tag='სალათის ფურცელი')
+          label(for='shw-chk-6')
+            span
+            | სალათის ფურცელი
+          br
+          input#shw-chk-7(type='checkbox' name='shawarma-ingredients-checkbox' data-tag='პამიდორი')
+          label(for='shw-chk-7')
+            span
+            | პამიდორი
+          br
+    button.card-button შეუკვეთე ახლავე
+// hamburger-ingredients
+.container
+  .popup.hamburger-ingredients-popup
+    //
+      <svg viewBox="0 0 352 512" class="popup__close">
+      <title>close</title>
+      <use href="/img/icons/close.svg"></use>
+      </svg>
+    img.popup__close(src='/img/icons/close.svg')
+    .hamburger-ingredients
+      .hamburger-ingredients__picture
+        img.hamburger-ingredients__img-bone(src='/img/opens/open-burger/burger-3-in-1.png' alt='bone-hamburger')
+        img.hamburger-ingredients__img-salad-1(src='/img/opens/open-burger/burger-salad-1.png' alt='სალათის ფურცელი')
+        img.hamburger-ingredients__img-tomato(src='/img/opens/open-burger/burger-tomato.png' alt='პამიდორი')
+        img.hamburger-ingredients__img-cheese(src='/img/opens/open-burger/burger-cheese.png' alt='ყველი')
+        img.hamburger-ingredients__img-ketchup(src='/img/opens/open-burger/burger-ketchup.png' alt='კეტჩუპი')
+        img.hamburger-ingredients__img-onion(src='/img/opens/open-burger/burger-onion.png' alt='ხახვი')
+        img.hamburger-ingredients__img-cucumber(src='/img/opens/open-burger/burger-cucumber.png' alt='მჟავე კიტრი')
+        img.hamburger-ingredients__img-salad-2(src='/img/opens/open-burger/burger-salad-2.png' alt='სალათის ფურცელი')
+      form.hamburger-ingredients__inputs
+        div
+          input#ham-chk-1(type='checkbox' name='hamburger-ingredients-checkbox' data-tag='სალათის ფურცელი')
+          label(for='ham-chk-1')
+            span
+            | სალათის ფურცელი
+          br
+          input#ham-chk-2(type='checkbox' name='hamburger-ingredients-checkbox' data-tag='პამიდორი')
+          label(for='ham-chk-2')
+            span
+            | პამიდორი
+          br
+          input#ham-chk-3(type='checkbox' name='hamburger-ingredients-checkbox' data-tag='ყველი')
+          label(for='ham-chk-3')
+            span
+            | ყველი
+          br
+        div
+          input#ham-chk-4(type='checkbox' name='hamburger-ingredients-checkbox' data-tag='კეტჩუპი')
+          label(for='ham-chk-4')
+            span
+            | კეტჩუპი
+          br
+          input#ham-chk-5(type='checkbox' name='hamburger-ingredients-checkbox' data-tag='ხახვი')
+          label(for='ham-chk-5')
+            span
+            | ხახვი
+          br
+          input#ham-chk-6(type='checkbox' name='hamburger-ingredients-checkbox' data-tag='მჟავე კიტრი')
+          label(for='ham-chk-6')
+            span
+            | მჟავე კიტრი
+          br
+    button.card-button შეუკვეთე ახლავე
+.order-table.order-table__hidden
+  p.order-table__message დაამატეთ შეკვეთა...
+// thanks-popup
+.container.container-thanks
+  .popup.thanks-popup
+    //
+      <svg viewBox="0 0 352 512" class="popup__close">
+      <title>close</title>
+      <use href="/img/icons/close"></use>
+      </svg>
+    img.popup__close(src='/img/icons/close.svg')
+    h4.heading-4.thanks-popup__text
+      | შეკვეთა მიღებულია 
+      br
+      | გმადლობთ, რომ სარგებლობთ 
+      span LoveToServe
+      | -ის მომსახურებით

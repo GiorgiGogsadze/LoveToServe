@@ -1,0 +1,125 @@
+.shawarma-popup {
+  background-color: orange;
+}
+.shawarma-ingredients-popup {
+  padding: 2.5rem;
+  background-image: linear-gradient(to right, #fe8c00, #f83600);
+}
+.shawarma-ingredients-popup .popup__close {
+  fill: #000;
+}
+.shawarma-ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.shawarma-ingredients__picture {
+  width: 20rem;
+  height: 20rem;
+  margin-right: 2rem;
+  position: relative;
+  background-size: cover;
+}
+.shawarma-ingredients__img-cucumber,
+.shawarma-ingredients__img-ketchup,
+.shawarma-ingredients__img-mustard,
+.shawarma-ingredients__img-onion,
+.shawarma-ingredients__img-pepper,
+.shawarma-ingredients__img-salad,
+.shawarma-ingredients__img-tomato {
+  width: 4rem;
+  position: absolute;
+  display: none;
+}
+.shawarma-ingredients__img-shawarma {
+  width: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.shawarma-ingredients__img-pepper {
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.shawarma-ingredients__img-cucumber {
+  top: 25%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+}
+.shawarma-ingredients__img-ketchup {
+  top: 55%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+}
+.shawarma-ingredients__img-mustard {
+  top: 77%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+.shawarma-ingredients__img-onion {
+  top: 86%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+.shawarma-ingredients__img-salad {
+  top: 59%;
+  left: 13%;
+  transform: translate(-50%, -50%);
+}
+.shawarma-ingredients__img-tomato {
+  top: 26%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+.shawarma-ingredients__inputs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.shawarma-ingredients__inputs input {
+  display: none;
+}
+.shawarma-ingredients__inputs input:checked + label span::before {
+  content: "\2714";
+  color: var(--shawarma-button-color);
+}
+.shawarma-ingredients__inputs input:checked + label span {
+  border: solid 0.3rem var(--shawarma-button-color);
+}
+.shawarma-ingredients__inputs input + label:hover span {
+  border: solid 0.3rem var(--shawarma-button-color);
+}
+.shawarma-ingredients__inputs label {
+  font-size: 2rem;
+  display: flex;
+  margin: 0 2rem 1rem 0;
+  align-items: center;
+}
+.shawarma-ingredients__inputs label span {
+  --shawarma-button-color: #0f0;
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: solid 0.3rem red;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+.shawarma-ingredients__inputs label span:before {
+  content: "";
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  line-height: 1;
+  transform: translate(-50%, -50%);
+  font-weight: 1000;
+}

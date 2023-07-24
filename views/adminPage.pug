@@ -1,0 +1,18 @@
+doctype html
+head
+  block head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title LoveToServe | Admin
+    link(rel='icon' type='image/x-icon' href='/img/favicon-32x32.png')
+    link(rel='stylesheet' href='/admin/css/admin.css')
+    script(src='/admin/js/adminscript.js', defer, type="module")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js', defer)
+body
+  header.header
+    block header
+      button.logout-btn.header__button Log out
+  section.main
+    block content
+  footer.footer &copy; საიტი ეკუთვნის გიორგი გოგსაძეს

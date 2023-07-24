@@ -1,0 +1,139 @@
+.footer {
+  background-image: linear-gradient(135deg, #492cdd 0%, #ad38e2 100%);
+  padding-top: 2rem;
+}
+.footer__above {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__logo {
+  width: 5rem;
+  margin-right: 1rem;
+}
+.footer__name {
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-style: normal;
+  color: #eee;
+  letter-spacing: 3px;
+}
+.footer__copy {
+  width: 60%;
+  text-align: center;
+  font-size: 1.4rem;
+  margin: 3rem auto 2rem auto;
+  color: #e0dfee;
+  text-shadow: 0 0 1rem #000;
+  font-family: none;
+  font-weight: 600;
+}
+.footer__down {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.footer__problem {
+  cursor: pointer;
+}
+.footer__problem__text {
+  font-size: 1.4rem;
+  font-family: none;
+  color: var(--color-grey-1);
+}
+.footer__problem:hover {
+  background-color: var(--color-purple-2);
+}
+.footer__problem,
+.react,
+.facebook {
+  transition: all 0.2s;
+  background-color: var(--color-purple-1);
+  box-shadow: 0 0 1rem #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21rem;
+  height: 6rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+}
+.react {
+  flex-direction: column;
+}
+.react:hover {
+  background-color: var(--color-purple-2);
+}
+.react:hover .react__stars {
+  opacity: 1;
+}
+.react__stars {
+  opacity: 0;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.react__stars__input:checked ~ .react__stars__label .react__stars__svg {
+  opacity: 0;
+}
+.react__stars__input:checked ~ .react__stars__label .react__stars__svg-full {
+  opacity: 1;
+}
+.react__stars__input {
+  display: none;
+}
+.react__stars__label {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+}
+.react__stars__svg {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  fill: #ff9529;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s;
+}
+.react__stars__svg-full {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  fill: #ff9529;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.2s;
+}
+.react__text {
+  font-size: 1.4rem;
+  font-family: none;
+  color: var(--color-grey-1);
+  cursor: default;
+}
+.facebook:hover {
+  background-color: var(--color-purple-2);
+}
+.facebook__text {
+  color: var(--color-grey-1);
+  font-size: 1.4rem;
+  font-family: none;
+  width: 60%;
+  text-align: end;
+  cursor: default;
+}
+.facebook__link {
+  margin-left: auto;
+}
+.facebook__svg {
+  width: 4rem;
+  fill: #4267b2;
+  border-radius: 50%;
+  background-color: #fff;
+}

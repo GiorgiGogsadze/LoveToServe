@@ -1,0 +1,17 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title LoveToServe | Login
+  link(rel='icon' type='image/x-icon' href='/img/favicon-32x32.png')
+  link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,700")
+  link(rel='stylesheet' href='/admin/css/login.css')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js', defer)
+  script(defer, type='module' src='/admin/js/loginController.js')
+.login-form
+  form
+    h1 Login
+      .input-field
+        input(type='password' placeholder='PASSWORD' id="password")
+    .action
+      button(type="submit") Log in
