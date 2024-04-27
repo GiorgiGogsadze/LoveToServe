@@ -4,7 +4,7 @@
   "description": "Serving app",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "build": "parcel build index.html"
   },
   "author": "Giorgi Gogsadze",
   "license": "ISC",
