@@ -1,0 +1,145 @@
+.footer {
+  background-image: linear-gradient(135deg, #492cdd 0%, #ad38e2 100%);
+  padding-top: 2rem;
+  &__above {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__logo {
+    width: 5rem;
+    margin-right: 1rem;
+  }
+  &__name {
+    font-size: 2rem;
+    font-family: "Playfair Display", serif;
+    font-style: normal;
+    color: #eee;
+    letter-spacing: 3px;
+  }
+  &__copy {
+    width: 60%;
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 3rem auto 2rem auto;
+    color: #e0dfee;
+    text-shadow: 0 0 1rem #000;
+    font-family: none;
+    font-weight: 600;
+  }
+  &__down {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  &__problem {
+    cursor: pointer;
+    &__text {
+      font-size: 1.4rem;
+      font-family: none;
+      color: var(--color-grey-1);
+    }
+    &:hover {
+      background-color: var(--color-purple-2);
+    }
+  }
+}
+.footer__problem,
+.react,
+.facebook {
+  transition: all 0.2s;
+  background-color: var(--color-purple-1);
+  box-shadow: 0 0 1rem #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 21rem;
+  height: 6rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+}
+
+.react {
+  flex-direction: column;
+  &:hover {
+    background-color: var(--color-purple-2);
+  }
+  &:hover &__stars {
+    opacity: 1;
+  }
+  &__stars {
+    opacity: 0;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    &__input:checked ~ &__label &__svg {
+      opacity: 0;
+    }
+    &__input:checked ~ &__label &__svg-full {
+      opacity: 1;
+    }
+    &__input {
+      display: none;
+    }
+    &__label {
+      position: relative;
+      height: 2rem;
+      width: 2rem;
+    }
+    &__svg {
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      //   fill: #ffd700;
+      fill: #ff9529;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: all 0.2s;
+    }
+    &__svg-full {
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      //   fill: #ffd700;
+      fill: #ff9529;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all 0.2s;
+    }
+  }
+  &__text {
+    font-size: 1.4rem;
+    font-family: none;
+    color: var(--color-grey-1);
+    cursor: default;
+  }
+}
+
+.facebook {
+  &:hover {
+    background-color: var(--color-purple-2);
+  }
+  &__text {
+    color: var(--color-grey-1);
+    font-size: 1.4rem;
+    font-family: none;
+    width: 60%;
+    text-align: end;
+    cursor: default;
+  }
+  &__link {
+    margin-left: auto;
+  }
+  &__svg {
+    width: 4rem;
+    fill: #4267b2;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}

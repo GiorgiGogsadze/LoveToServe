@@ -1,0 +1,310 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  transition: all 0.5s;
+  border-radius: 5px;
+  position: relative;
+  margin: 2.5rem;
+  width: 20rem;
+  img {
+    width: 100%;
+    border-radius: 5px;
+    opacity: 0;
+    display: block;
+  }
+  &__front,
+  &__back {
+    transition: all 0.5s;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1.5rem 4rem rgba(#000, 0.3);
+    img {
+      width: 100%;
+      border-radius: 5px;
+      opacity: 0;
+      display: block;
+    }
+  }
+  &__front {
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s;
+    filter: brightness(90%);
+    cursor: pointer;
+    &:hover {
+      filter: brightness(100%);
+    }
+    &__name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0.5rem 0.8rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      box-shadow: 0 0 1rem rgba(#000, 0.6);
+    }
+    &:hover &__name {
+      animation: jumping-name 0.5s infinite;
+    }
+  }
+  &__back {
+    transform: rotateY(180deg);
+    &-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      p:first-of-type {
+        font-size: 1.6rem;
+        font-weight: 1000;
+        margin: 1rem 0;
+        @media only screen and (max-width: 18.75em) {
+          margin: 0.5rem 0;
+        }
+      }
+      p:not(:first-of-type) {
+        font-size: 1.5rem;
+        margin: 0.5rem auto;
+        font-weight: 400;
+        width: 80%;
+        text-align: start;
+        display: flex;
+        align-items: flex-start;
+        text-shadow: 0 0 1rem rgba(#000, 0.5);
+        @media only screen and (max-width: 18.75em) {
+          margin: 0.1rem 0;
+        }
+        &::before {
+          content: "";
+          display: inline-block;
+          height: 0.7rem;
+          width: 0.7rem;
+          border-radius: 50%;
+          margin: 0.5rem 0.5rem 0 0;
+          flex-shrink: 0;
+        }
+      }
+    }
+    &__name {
+      margin-top: 1rem;
+      font-size: 2rem;
+      @media only screen and (max-width: 18.75em) {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  &__click {
+    transform: scale(0.9);
+    position: absolute;
+    width: 3rem !important;
+    opacity: 1 !important;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  &__front:hover &__click {
+    animation: rise-click 0.5s infinite;
+  }
+}
+@keyframes rise-click {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+@keyframes jumping-name {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -100%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+//64 picture
+.card__front {
+  &-0 {
+    .card__front__name {
+      background-image: linear-gradient(135deg, #f2994a, #f2c94c);
+      color: #000;
+    }
+  }
+  &-1 {
+    .card__front__name {
+      background-image: linear-gradient(135deg, #f12711, #f5af19);
+      color: #000;
+    }
+  }
+  &-2 {
+    .card__front__name {
+      background-image: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+      color: #fff;
+    }
+  }
+  &-3 {
+    .card__front__name {
+      background-image: linear-gradient(135deg, #dbe6f6, #c5796d);
+      color: #000;
+    }
+  }
+  &-4 {
+    .card__front__name {
+      background-image: linear-gradient(135deg, #56ab2f, #a8e063);
+      color: #000;
+    }
+  }
+  &-5 {
+    .card__front__name {
+      background-image: linear-gradient(135deg, #c31432, #240b36);
+      color: #fff;
+    }
+  }
+  &-6 {
+    .card__front__name {
+      background-image: linear-gradient(135deg, #ee0979, #ff6a00);
+      color: #fff;
+    }
+  }
+  &-7 {
+    .card__front__name {
+      background-image: linear-gradient(135deg, #be93c5, #7bc6cc);
+      color: #000;
+    }
+  }
+}
+.card__back {
+  &-0 {
+    background-image: linear-gradient(135deg, #f2994a, #f2c94c);
+    .card__back__name {
+      color: #61045f;
+    }
+    p:first-of-type {
+      color: #000;
+    }
+    p:not(:first-of-type) {
+      color: #000;
+      &::before {
+        background-color: #61045f;
+      }
+    }
+  }
+  &-1 {
+    background-image: linear-gradient(135deg, #f12711, #f5af19);
+    .card__back__name {
+      color: #4d0909;
+    }
+    p:first-of-type {
+      color: #000;
+    }
+    p:not(:first-of-type) {
+      color: #000;
+      &::before {
+        background-color: #4d0909;
+      }
+    }
+  }
+  &-2 {
+    background-image: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    .card__back__name {
+      color: #ffc0cb;
+    }
+    p:first-of-type {
+      color: #fff;
+    }
+    p:not(:first-of-type) {
+      color: #fff;
+      &::before {
+        background-color: #ffc0cb;
+      }
+    }
+  }
+  &-3 {
+    background-image: linear-gradient(135deg, #dbe6f6, #c5796d);
+    .card__back__name {
+      color: #6e260e;
+    }
+    p:first-of-type {
+      color: #000;
+    }
+    p:not(:first-of-type) {
+      color: #000;
+      &::before {
+        background-color: #6e260e;
+      }
+    }
+  }
+  &-4 {
+    background-image: linear-gradient(135deg, #56ab2f, #a8e063);
+    .card__back__name {
+      color: #702963;
+    }
+    p:first-of-type {
+      color: #000;
+    }
+    p:not(:first-of-type) {
+      color: #000;
+      &::before {
+        background-color: #702963;
+      }
+    }
+  }
+  &-5 {
+    background-image: linear-gradient(135deg, #c31432, #240b36);
+    .card__back__name {
+      color: #d9bb1a;
+    }
+    p:first-of-type {
+      color: #fff;
+    }
+    p:not(:first-of-type) {
+      color: #fff;
+      &::before {
+        background-color: #d9bb1a;
+      }
+    }
+  }
+  &-6 {
+    background-image: linear-gradient(135deg, #ee0979, #ff6a00);
+    .card__back__name {
+      color: #eadef0ee;
+    }
+    p:first-of-type {
+      color: #fff;
+    }
+    p:not(:first-of-type) {
+      color: #fff;
+      &::before {
+        background-color: #eadef0ee;
+      }
+    }
+  }
+  &-7 {
+    background-image: linear-gradient(135deg, #be93c5, #7bc6cc);
+    .card__back__name {
+      color: #3751ac;
+    }
+    p:first-of-type {
+      color: #000;
+    }
+    p:not(:first-of-type) {
+      color: #000;
+      &::before {
+        background-color: #3751ac;
+      }
+    }
+  }
+}

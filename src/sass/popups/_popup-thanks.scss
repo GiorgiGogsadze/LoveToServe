@@ -1,0 +1,19 @@
+.thanks-popup {
+  width: 40rem;
+  height: 25rem;
+  background-image: linear-gradient(rgba(#999, 0.2), rgba(#999, 0.2)),
+    url("../img/bg-images/for-thanks.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__text {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 1rem #000;
+    span {
+      color: #00fadd;
+    }
+  }
+}

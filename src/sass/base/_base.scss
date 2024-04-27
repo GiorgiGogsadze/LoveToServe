@@ -1,0 +1,142 @@
+:root {
+  --button-color-dark: #c9184a;
+  --button-color-medium: #ff4d6d;
+  --button-color-light: #ff758f;
+  --color-grey-1: #333;
+
+  --button-green: #4cbb17;
+
+  --color-purple-1: #e6e6fa;
+  --color-purple-2: hsl(240, 67%, 90%);
+}
+@font-face {
+  src: url("../fonts/gl-parizuli-bold.ttf");
+  font-family: "parizuli-bol";
+}
+@font-face {
+  src: url("../fonts/gl-parizuli-medium.ttf");
+  font-family: "parizuli-med";
+}
+@font-face {
+  src: url("../fonts/gl-parizuli-regular.ttf");
+  font-family: "parizuli-reg";
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  @media only screen and (max-width: 75em) {
+    font-size: 56.25%;
+  }
+  @media only screen and (max-width: 56.25em) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: 37.5em) {
+    font-size: 40%;
+  }
+  @media only screen and (max-width: 25em) {
+    font-size: 35%;
+  }
+  @media only screen and (max-width: 18.75em) {
+    font-size: 30%;
+  }
+}
+
+body {
+  font-family: "parizuli-reg";
+  // color: var(--color-grey-1);
+}
+.logo {
+  background-color: #fff;
+  border-radius: 50%;
+}
+.container {
+  font-family: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(#000, 0.2);
+  backdrop-filter: blur(1px);
+  z-index: 100;
+}
+.popup__close {
+  fill: #f00;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.popup {
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 2rem;
+  position: relative;
+  transform: scale(0);
+  z-index: 100;
+}
+.container-open {
+  animation: open 0.5s forwards !important;
+}
+.popup-open {
+  animation: openp 0.5s forwards !important;
+}
+.container-close {
+  animation: close 0.5s forwards !important;
+}
+.popup-close {
+  animation: closep 0.5s forwards !important;
+}
+
+@keyframes open {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+@keyframes openp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes close {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes closep {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}

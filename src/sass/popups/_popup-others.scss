@@ -1,0 +1,84 @@
+.types-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  &__after {
+    display: none;
+    position: absolute;
+    letter-spacing: 0.5rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    bottom: -1rem;
+    width: 100%;
+    text-align: center;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 17rem;
+    margin: 1rem;
+    margin-bottom: 0.7rem;
+    border: 0.5rem solid transparent;
+    transition: all 0.5s;
+    display: block;
+    cursor: pointer;
+    align-self: center;
+    @media only screen and (max-width: 25em) {
+      max-width: 14rem;
+      margin: 0.7rem;
+      margin-bottom: 0.5rem;
+    }
+    @media only screen and (max-width: 18.75em) {
+      max-width: 12rem;
+    }
+  }
+  &__btn {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "parizuli-reg";
+    margin: 1rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    background-image: linear-gradient(
+      135deg,
+      #29bf12 0%,
+      #29bf12 50%,
+      #f22b29 50%,
+      #f22b29 100%
+    );
+    background-size: 220%;
+    background-position: right;
+    padding: 0.5rem 1.5rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.5s;
+    @media only screen and (max-width: 25em) {
+      margin: 0.5rem;
+      margin-bottom: 0.7rem;
+      max-width: 14rem;
+    }
+  }
+  input {
+    display: none;
+  }
+}
+
+.selection-popup {
+  background-color: rgba(#ffaa33, 0.9);
+}
+.selection-types {
+  &:checked + label img {
+    border: 0.5rem solid var(--button-green);
+  }
+  &:hover + label img {
+    border: 0.5rem solid var(--button-green);
+  }
+  &:checked + label .types-container__btn {
+    background-position: left;
+  }
+}

@@ -1,0 +1,114 @@
+.order-table__opener {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 1rem 5rem;
+  border-radius: 500px;
+  border: #ff160c 3px solid;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10;
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: rgb(37, 37, 37) 2px 2px 10px;
+  }
+  &:active {
+    box-shadow: none;
+  }
+  &-notification {
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    top: -13%;
+    left: 4%;
+    background-color: #3e1fd9;
+    border-radius: 100%;
+  }
+}
+.order-table {
+  background: linear-gradient(135deg, rgb(237, 33, 58), rgb(147, 41, 30));
+  border-radius: 5px;
+  width: 40rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: fixed;
+  right: 2rem;
+  bottom: 7rem;
+  height: 0;
+  transition: height 1s;
+  z-index: 10;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .order-list {
+    padding: 1rem;
+    &__item {
+      position: relative;
+      border: #484041 2px solid;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-evenly;
+      cursor: default;
+      margin-bottom: 1rem;
+      div {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33.3%;
+        P {
+          font-size: 1.5rem;
+          font-family: "parizuli-bol";
+          margin-bottom: 0.5rem;
+          color: #f7cb15;
+        }
+      }
+      &-remove {
+        position: absolute;
+        top: -1.5rem;
+        right: 0;
+        font-size: 2rem;
+        font-weight: 900;
+        color: #eecfd4;
+        cursor: pointer;
+        &:hover {
+          color: #191923;
+        }
+      }
+    }
+  }
+  &__message {
+    font-size: 2.5rem;
+    color: white;
+    margin: 1rem;
+  }
+  &__end {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem 1rem 1rem;
+    p {
+      font-size: 2rem;
+      color: white;
+      span {
+        font-size: 2.5rem;
+        color: #6b69e9;
+        font-weight: 1000;
+      }
+    }
+  }
+}
+.order-table__hidden {
+  height: 0;
+}
+.order-table__shown {
+  height: 80vh;
+}

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="./src/img/favicon-32x32.png" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fonts -->
+    <link rel="stylesheet" href="src/sass/main.scss" />
+    <script defer type="module" src="./src/js/controller.js"></script>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="header__above">
+        <img
+          src="./src/img/main-logo.png"
+          class="logo header__logo"
+          alt="web-page logo"
+        />
+        <div class="header__text">
+          <h1 class="heading-1 header__heading--1">LoveToServe</h1>
+          <br />
+          <h2 class="heading-2 header__heading--2">
+            ნუ დაელოდები მიმტანს, შეუკვეთე ახლავე
+          </h2>
+        </div>
+        <select
+          name="table"
+          id="table"
+          class="table-input"
+          title="table"
+        ></select>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__list"></ul>
+      </nav>
+      <button class="order-table__opener">
+        <span
+          class="order-table__opener-notification"
+          style="display: none"
+        ></span
+        >ნახეთ შეკვეთა
+      </button>
+    </header>
+    <div class="home"></div>
+    <footer class="footer" id="footer">
+      <div class="footer__above">
+        <img
+          src="./src/img/main-logo.png"
+          alt="logo"
+          class="logo footer__logo"
+        />
+        <p class="footer__name">LoveToServe</p>
+      </div>
+      <p class="footer__copy">
+        &copy; საიტი ეკუთვნის გიორგი გოგსაძეს, ნებადართულია მისი გადაკეთება
+        მხოლოდ იმ შემთხვევაში, თუ მიუთითებთ ავტორს.
+      </p>
+      <div class="footer__down">
+        <div class="footer__problem">
+          <p class="footer__problem__text">პრობლემის შეტყობინება</p>
+        </div>
+        <div class="react">
+          <div class="react__stars"></div>
+          <p class="react__text">დაწერე შეფასება</p>
+        </div>
+        <div class="facebook">
+          <p class="facebook__text">დაგვიმეგობრდი ფეისბუქზე</p>
+          <a
+            href="https://www.facebook.com"
+            class="facebook__link"
+            target="_blank"
+          >
+            <svg viewBox="10 10 490 490" class="facebook__svg">
+              <title>facebook</title>
+              <use href="./src/img/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- see full popup -->
+    <div class="see-full container">
+      <div class="selection-popup popup"></div>
+    </div>
+    <!-- order popup -->
+    <div class="container">
+      <div class="popup order-popup">
+        <svg viewBox="0 0 352 512" class="popup__close">
+          <title>close</title>
+          <use href="./src/img/icons.svg#icon-close"></use>
+        </svg>
+        <form class="order__questions">
+          <div class="number-plate">
+            <label for="Pnumber">რაოდენობა:</label>
+            <input
+              type="number"
+              name="Pnumber"
+              id="Pnumber"
+              min="1"
+              value="1"
+              required
+            />
+          </div>
+          <p class="total-price">
+            ფასი: <span class="total-price__number"></span> ლარი
+          </p>
+          <button class="end-button"><span>შეკვეთებში დამატება</span></button>
+        </form>
+      </div>
+    </div>
+    <!-- form-popup -->
+    <div class="container">
+      <div class="popup form-popup">
+        <svg viewBox="0 0 352 512" class="popup__close">
+          <title>close</title>
+          <use href="./src/img/icons.svg#icon-close"></use>
+        </svg>
+        <h4 class="heading-4 form-popup__header">პრობლემის შეტყობინება</h4>
+        <form action="" class="form-popup__form">
+          <div class="form-popup__about">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="სახელი, გვარი"
+              required
+            />
+          </div>
+          <div class="form-popup__problems">
+            <p class="form-popup__problem">პრობლემის ხარისხი:</p>
+            <div class="form-popup__select">
+              <div>
+                <input
+                  type="radio"
+                  name="dop"
+                  id="dop1"
+                  value="საგანგაშო"
+                  class="problem-level"
+                  required
+                />
+                <label for="dop1"><span></span> საგანგაშო</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="dop"
+                  id="dop2"
+                  value="საყურადღებო"
+                  class="problem-level"
+                />
+                <label for="dop2"><span></span> საყურადღებო</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="dop"
+                  id="dop3"
+                  value="მცირე დისკომფორტის შემქმნელი"
+                  class="problem-level"
+                />
+                <label for="dop3"
+                  ><span></span> მცირე დისკომფორტის შემქმნელი</label
+                >
+              </div>
+            </div>
+          </div>
+          <label for="message" class="form-popup__fill"
+            >დაწერე პრობლემის შესახებ:</label
+          >
+          <div class="text-and-btn">
+            <textarea name="message" id="message" required></textarea>
+            <div class="form-button-cont">
+              <button type="submit" class="form-button">გაგზავნა</button>
+              <div class="form-button__before"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- shawarma-ingredients -->
+    <div class="container">
+      <div class="popup shawarma-ingredients-popup">
+        <svg viewBox="0 0 352 512" class="popup__close">
+          <title>close</title>
+          <use href="./src/img/icons.svg#icon-close"></use>
+        </svg>
+        <div class="shawarma-ingredients">
+          <div class="shawarma-ingredients__picture">
+            <img
+              src="./src/img/opens/open shawarma/shawarma.png"
+              alt="shawarma"
+              class="shawarma-ingredients__img-shawarma"
+            />
+            <img
+              src="./src/img/opens/open shawarma/shawarma-cucumber.png"
+              alt="კიტრი"
+              class="shawarma-ingredients__img-cucumber"
+            />
+            <img
+              src="./src/img/opens/open shawarma/shawarma-ketchup.png"
+              alt="კეტჩუპი"
+              class="shawarma-ingredients__img-ketchup"
+            />
+            <img
+              src="./src/img/opens/open shawarma/shawarma-mustard.png"
+              alt="მდოგვი"
+              class="shawarma-ingredients__img-mustard"
+            />
+            <img
+              src="./src/img/opens/open shawarma/shawarma-onion.png"
+              alt="ხახვი"
+              class="shawarma-ingredients__img-onion"
+            />
+            <img
+              src="./src/img/opens/open shawarma/shawarma-pepper.png"
+              alt="წიწაკა"
+              class="shawarma-ingredients__img-pepper"
+            />
+            <img
+              src="./src/img/opens/open shawarma/shawarma-salad.png"
+              alt="სალათის ფურცელი"
+              class="shawarma-ingredients__img-salad"
+            />
+            <img
+              src="./src/img/opens/open shawarma/shawarma-tomato.png"
+              alt="პამიდორი"
+              class="shawarma-ingredients__img-tomato"
+            />
+          </div>
+          <form class="shawarma-ingredients__inputs">
+            <div>
+              <input
+                type="checkbox"
+                name="shawarma-ingredients-checkbox"
+                id="shw-chk-1"
+                data-tag="წიწაკა"
+              />
+              <label for="shw-chk-1"><span></span>წიწაკა</label><br />
+              <input
+                type="checkbox"
+                name="shawarma-ingredients-checkbox"
+                id="shw-chk-2"
+                data-tag="კიტრი"
+              />
+              <label for="shw-chk-2"><span></span>კიტრი</label><br />
+              <input
+                type="checkbox"
+                name="shawarma-ingredients-checkbox"
+                id="shw-chk-3"
+                data-tag="კეტჩუპი"
+              />
+              <label for="shw-chk-3"><span></span>კეტჩუპი</label><br />
+              <input
+                type="checkbox"
+                name="shawarma-ingredients-checkbox"
+                id="shw-chk-4"
+                data-tag="მდოგვი"
+              />
+              <label for="shw-chk-4"><span></span>მდოგვი</label><br />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="shawarma-ingredients-checkbox"
+                id="shw-chk-5"
+                data-tag="ხახვი"
+              />
+              <label for="shw-chk-5"><span></span>ხახვი</label><br />
+              <input
+                type="checkbox"
+                name="shawarma-ingredients-checkbox"
+                id="shw-chk-6"
+                data-tag="სალათის ფურცელი"
+              />
+              <label for="shw-chk-6"><span></span>სალათის ფურცელი</label><br />
+              <input
+                type="checkbox"
+                name="shawarma-ingredients-checkbox"
+                id="shw-chk-7"
+                data-tag="პამიდორი"
+              />
+              <label for="shw-chk-7"><span></span>პამიდორი</label><br />
+            </div>
+          </form>
+        </div>
+        <button class="card-button">შეუკვეთე ახლავე</button>
+      </div>
+    </div>
+    <!-- hamburger-ingredients -->
+    <div class="container">
+      <div class="popup hamburger-ingredients-popup">
+        <svg viewBox="0 0 352 512" class="popup__close">
+          <title>close</title>
+          <use href="./src/img/icons.svg#icon-close"></use>
+        </svg>
+        <div class="hamburger-ingredients">
+          <div class="hamburger-ingredients__picture">
+            <img
+              src="./src/img/opens/open burger/burger-3-in-1.png"
+              alt="bone-hamburger"
+              class="hamburger-ingredients__img-bone"
+            />
+            <img
+              src="./src/img/opens/open burger/burger-salad-1.png"
+              alt="სალათის ფურცელი"
+              class="hamburger-ingredients__img-salad-1"
+            />
+            <img
+              src="./src/img/opens/open burger/burger-tomato.png"
+              alt="პამიდორი"
+              class="hamburger-ingredients__img-tomato"
+            />
+            <img
+              src="./src/img/opens/open burger/burger-cheese.png"
+              alt="ყველი"
+              class="hamburger-ingredients__img-cheese"
+            />
+            <img
+              src="./src/img/opens/open burger/burger-ketchup.png"
+              alt="კეტჩუპი"
+              class="hamburger-ingredients__img-ketchup"
+            />
+            <img
+              src="./src/img/opens/open burger/burger-onion.png"
+              alt="ხახვი"
+              class="hamburger-ingredients__img-onion"
+            />
+            <img
+              src="./src/img/opens/open burger/burger-cucumber.png"
+              alt="მჟავე კიტრი"
+              class="hamburger-ingredients__img-cucumber"
+            />
+            <img
+              src="./src/img/opens/open burger/burger-salad-2.png"
+              alt="სალათის ფურცელი"
+              class="hamburger-ingredients__img-salad-2"
+            />
+          </div>
+          <form class="hamburger-ingredients__inputs">
+            <div>
+              <input
+                type="checkbox"
+                name="hamburger-ingredients-checkbox"
+                id="ham-chk-1"
+                data-tag="სალათის ფურცელი"
+              />
+              <label for="ham-chk-1"><span></span>სალათის ფურცელი</label><br />
+              <input
+                type="checkbox"
+                name="hamburger-ingredients-checkbox"
+                id="ham-chk-2"
+                data-tag="პამიდორი"
+              />
+              <label for="ham-chk-2"><span></span>პამიდორი</label><br />
+              <input
+                type="checkbox"
+                name="hamburger-ingredients-checkbox"
+                id="ham-chk-3"
+                data-tag="ყველი"
+              />
+              <label for="ham-chk-3"><span></span>ყველი</label><br />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="hamburger-ingredients-checkbox"
+                id="ham-chk-4"
+                data-tag="კეტჩუპი"
+              />
+              <label for="ham-chk-4"><span></span>კეტჩუპი</label><br />
+              <input
+                type="checkbox"
+                name="hamburger-ingredients-checkbox"
+                id="ham-chk-5"
+                data-tag="ხახვი"
+              />
+              <label for="ham-chk-5"><span></span>ხახვი</label><br />
+              <input
+                type="checkbox"
+                name="hamburger-ingredients-checkbox"
+                id="ham-chk-6"
+                data-tag="მჟავე კიტრი"
+              />
+              <label for="ham-chk-6"><span></span>მჟავე კიტრი</label><br />
+            </div>
+          </form>
+        </div>
+        <button class="card-button">შეუკვეთე ახლავე</button>
+      </div>
+    </div>
+    <div class="order-table order-table__hidden">
+      <p class="order-table__message">დაამატეთ შეკვეთა...</p>
+    </div>
+    <!-- thanks-popup -->
+    <div class="container container-thanks">
+      <div class="popup thanks-popup">
+        <svg viewBox="0 0 352 512" class="popup__close">
+          <title>close</title>
+          <use href="./src/img/icons.svg#icon-close"></use>
+        </svg>
+        <h4 class="heading-4 thanks-popup__text">
+          შეკვეთა მიღებულია <br />
+          გმადლობთ, რომ სარგებლობთ <span>LoveToServe</span>-ის მომსახურებით
+        </h4>
+      </div>
+    </div>
+  </body>
+</html>

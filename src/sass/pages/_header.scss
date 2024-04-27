@@ -1,0 +1,104 @@
+.header {
+  padding: 3rem;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(#222, 0.3), rgba(#222, 0.3)),
+    url("../img/bg-images/bgi-header.jpg");
+  &__above {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__logo {
+    height: 15vh;
+    display: inline-block;
+    margin-left: 1rem;
+  }
+  &__text {
+    text-align: center;
+    justify-self: center;
+    margin: 0 auto;
+  }
+  &__heading--1 {
+    color: white;
+    display: inline-block;
+    line-height: 1;
+  }
+  &__heading--2 {
+    color: white;
+    display: inline-block;
+  }
+  &__nav {
+    max-width: 100rem;
+    margin: 3rem auto 0 auto;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  &__item {
+    width: 20rem;
+    margin: 2.5rem;
+    &-name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: 0 0 1rem #000;
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: #fff;
+      text-align: center;
+    }
+  }
+  .hidden-img {
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  &__image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    overflow: hidden;
+    transform: scale(0.9);
+    --box-shadow-color: #000;
+    box-shadow: 0 2rem 4rem var(--box-shadow-color);
+    &:hover {
+      --box-shadow-color: #fff;
+    }
+    & img {
+      height: 20vh;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+    box-shadow: 0 4rem 6rem var(--box-shadow-color);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}

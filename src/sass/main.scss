@@ -1,0 +1,18 @@
+@import "base/base";
+@import "base/typography";
+
+@import "components/button";
+@import "components/card";
+@import "components/table-input";
+@import "components/order-table";
+
+@import "pages/footer";
+@import "pages/header";
+@import "pages/home";
+
+@import "popups/popup-order";
+@import "popups/popup-thanks";
+@import "popups/popup-problem";
+@import "popups/popup-hamburger";
+@import "popups/popup-shawarma";
+@import "popups/popup-others";

@@ -1,0 +1,202 @@
+.shawarma-popup {
+  background-color: orange;
+}
+////////////////////////
+////////////////////////
+// shawarma-ingredients
+
+.shawarma-ingredients-popup {
+  padding: 2.5rem;
+  background-image: linear-gradient(to right, #fe8c00, #f83600);
+  .popup__close {
+    fill: #000;
+  }
+}
+.shawarma-ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  &__picture {
+    width: 20rem;
+    height: 20rem;
+    margin-right: 2rem;
+    position: relative;
+    background-size: cover;
+  }
+  &__img {
+    &-cucumber,
+    &-ketchup,
+    &-mustard,
+    &-onion,
+    &-pepper,
+    &-salad,
+    &-tomato {
+      width: 4rem;
+      position: absolute;
+      display: none;
+    }
+    &-shawarma {
+      width: 4rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+    &-pepper {
+      top: 12%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &-cucumber {
+      top: 25%;
+      left: 78%;
+      transform: translate(-50%, -50%);
+    }
+    &-ketchup {
+      top: 55%;
+      left: 87%;
+      transform: translate(-50%, -50%);
+    }
+    &-mustard {
+      top: 77%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+    }
+    &-onion {
+      top: 86%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+    }
+    &-salad {
+      top: 59%;
+      left: 13%;
+      transform: translate(-50%, -50%);
+    }
+    &-tomato {
+      top: 26%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    input {
+      display: none;
+      &:checked + label span::before {
+        content: "\2714";
+        color: var(--shawarma-button-color);
+      }
+      &:checked + label span {
+        border: solid 0.3rem var(--shawarma-button-color);
+      }
+      & + label:hover span {
+        border: solid 0.3rem var(--shawarma-button-color);
+      }
+    }
+    label {
+      font-size: 2rem;
+      display: flex;
+      margin: 0 2rem 1rem 0;
+      align-items: center;
+      span {
+        --shawarma-button-color: #00ff00;
+        display: inline-block;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        margin-right: 1rem;
+        border: solid 0.3rem red;
+        position: relative;
+        flex-shrink: 0;
+        transition: all 0.2s;
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 1.5rem;
+          height: 1.5rem;
+          border-radius: 50%;
+          margin-right: 1rem;
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          line-height: 1;
+          transform: translate(-50%, -50%);
+          font-weight: 1000;
+        }
+      }
+    }
+  }
+}
+
+// #shw-chk-1:checked + label span::before {
+//   content: "\2714";
+//   color: var(--shawarma-button-color);
+// }
+// #shw-chk-2:checked + label span::before {
+//   content: "\2714";
+//   color: var(--shawarma-button-color);
+// }
+// #shw-chk-3:checked + label span::before {
+//   content: "\2714";
+//   color: var(--shawarma-button-color);
+// }
+// #shw-chk-4:checked + label span::before {
+//   content: "\2714";
+//   color: var(--shawarma-button-color);
+// }
+// #shw-chk-5:checked + label span::before {
+//   content: "\2714";
+//   color: var(--shawarma-button-color);
+// }
+// #shw-chk-6:checked + label span::before {
+//   content: "\2714";
+//   color: var(--shawarma-button-color);
+// }
+// #shw-chk-7:checked + label span::before {
+//   content: "\2714";
+//   color: var(--shawarma-button-color);
+// }
+// #shw-chk-1:checked + label span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-2:checked + label span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-3:checked + label span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-4:checked + label span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-5:checked + label span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-6:checked + label span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-7:checked + label span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-1 + label:hover span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-2 + label:hover span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-3 + label:hover span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-4 + label:hover span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-5 + label:hover span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-6 + label:hover span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }
+// #shw-chk-7 + label:hover span {
+//   border: solid 0.3rem var(--shawarma-button-color);
+// }

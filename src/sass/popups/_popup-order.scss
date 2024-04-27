@@ -1,0 +1,38 @@
+.order-popup {
+  background-color: #242124;
+  width: auto;
+  padding-right: 3rem;
+}
+.order__questions {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+.number-plate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  label {
+    margin-right: 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  input {
+    width: 15rem;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+  }
+}
+.total-price {
+  margin-right: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+  span {
+    font-weight: 400;
+    color: rgb(255, 35, 200);
+    font-size: 2rem;
+    padding: 0.5rem 0;
+  }
+}

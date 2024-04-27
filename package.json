@@ -1,0 +1,15 @@
+{
+  "name": "lovetoserve",
+  "version": "1.0.0",
+  "description": "Serving app",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "author": "Giorgi Gogsadze",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  }
+}

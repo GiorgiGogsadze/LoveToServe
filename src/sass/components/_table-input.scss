@@ -1,0 +1,16 @@
+.table-input {
+  border: none;
+  outline: none;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, #121212, #343434);
+  color: white;
+  padding: 1rem;
+  option {
+    color: white;
+    background: #232323;
+    border: none;
+    outline: none;
+    font-size: 1.7rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}

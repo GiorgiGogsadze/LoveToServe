@@ -1,0 +1,11 @@
+section {
+  padding: 6rem;
+  box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+}
+.cards-grid {
+  max-width: 100rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
