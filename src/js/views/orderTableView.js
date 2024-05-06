@@ -6,7 +6,6 @@ const OrderTableView = class extends View {
   _notification = this._tableOpener.querySelector(
     ".order-table__opener-notification"
   );
-  _message = `<p class="order-table__message">დაამატეთ შეკვეთა...</p>`;
   constructor() {
     super();
     this._addEventOpenTable();
@@ -14,21 +13,28 @@ const OrderTableView = class extends View {
     PopupView._closePopup(document.querySelector(".container-thanks"));
   }
   _generateMarkup() {
-    if (this._data.length === 0) return this._message;
+    if (this._data.orders.length === 0)
+      return `<p class="order-table__message">${
+        this._data.lang === "geo" ? "დაამატეთ შეკვეთა..." : "add orders..."
+      }</p>`;
     return `<ul class="order-list">
         ${this._generateOrders()}
       </ul>
       <div class="order-table__end">
-        <button class="order-table__submit">შეკვეთა</button>
-        <p>ჯამი: <span>${this._countSum()}</span> ლარი</p>
+        <button class="order-table__submit">${
+          this._data.lang === "geo" ? "შეკვეთა" : "Order"
+        }</button>
+        <p>${
+          this._data.lang === "geo" ? "ჯამი" : "Total"
+        }: <span>${this._countSum()}</span> ₾</p>
       </div>`;
   }
   _generateOrders() {
-    return this._data.reduce((acc, order) => {
+    return this._data.orders.reduce((acc, order) => {
       acc += `<li class="order-list__item">
           <span class="order-list__item-remove" data-name=${order.name}>✗</span>
           <div class="order-list__item-name">
-            <p>დასახელება</p>
+            <p>${this._data.lang === "geo" ? "დასახელება" : "name"}</p>
             <svg style="position:absolute; height:10rem; width:33.3%"><title>${
               order.ingredients || ""
             }</title>
@@ -36,19 +42,19 @@ const OrderTableView = class extends View {
             <h5 class="heading-5">${order.name}</h5>
           </div>
           <div class="order-list__item-amount">
-            <p>რაოდენობა</p>
+            <p>${this._data.lang === "geo" ? "რაოდენობა" : "Amount"}</p>
             <h5 class="heading-5">${order.amount}</h5>
           </div>
           <div class="order-list__item-price">
-            <p>ფასი</p>
-            <h5 class="heading-5">${order.price} ლარი</h5>
+            <p>${this._data.lang === "geo" ? "ფასი" : "Price"}</p>
+            <h5 class="heading-5">${order.price} ₾</h5>
           </div>
         </li>`;
       return acc;
     }, ``);
   }
   _countSum() {
-    return this._data.reduce((acc, order) => {
+    return this._data.orders.reduce((acc, order) => {
       acc += order.price;
       return acc;
     }, 0);

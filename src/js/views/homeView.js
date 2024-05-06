@@ -18,7 +18,7 @@ const HomeView = class extends View {
       <div class="section-name-container">
         <h2 class="section-name section-name-${
           i - CSS_LOOP * Math.floor(i / CSS_LOOP)
-        }">${item.name}</h2>
+        }">${item.name[this._data.language.current]}</h2>
       </div>
       <div class="cards-grid">
       ${this._generateCard(item.title, i)}
@@ -30,6 +30,7 @@ const HomeView = class extends View {
   }
   _generateCard(title, n) {
     const currentFood = this._data.food.filter((food) => food.tag === title);
+    const curLang = this._data.language.current;
     return currentFood.reduce((acc, data) => {
       acc += `<div class="card">
           <img src=${require("../../img/Black.png")} alt=${data.title} />
@@ -40,7 +41,7 @@ const HomeView = class extends View {
         data.image
       }); transform: rotateY(0deg);">
             <img src=${require("../../img/Black.png")} alt=${data.title}/>
-            <h4 class="heading-4 card__front__name">${data.name}</h4>
+            <h4 class="heading-4 card__front__name">${data.name[curLang]}</h4>
             <img
               src=${require("../../img/output-onlinepngtools.png")}
               alt="click"
@@ -54,33 +55,38 @@ const HomeView = class extends View {
           )}" style="transform: rotateY(180deg);">
             <img src=${require("../../img/Black.png")} alt=${data.title} />
             <div class="card__back-content">
-            <h4 class="heading-4 card__back__name">${data.name}</h4>
+            <h4 class="heading-4 card__back__name">${data.name[curLang]}</h4>
               ${this._generateInfo(data)}
               <button class="${data.btn} ${data.btn}-${
         data.title
-      }" data-name ="${data.name}" data-price = "${
+      }" data-name ="${data.name[curLang]}" data-price = "${
         data.price
-      }">${this._generateButton(data)}</button>
+      }">${this._generateButton(data, curLang)}</button>
             </div>
           </div>
         </div>`;
       return acc;
     }, ``);
   }
-  _generateButton(data) {
+  _generateButton(data, curLang) {
     if (data.btn === `card-button`) {
-      return `შეუკვეთე ახლავე`;
+      return curLang === "geo" ? `შეუკვეთე ახლავე` : `Order Now`;
     } else if (data.btn === `select-button`) {
-      return `<p id="button-p">ნახე ვრცლად</p>`;
+      return `<p id="button-p">${
+        curLang === "geo" ? "ნახე ვრცლად" : "see more"
+      }</p>`;
     } else if (data.btn === `ingredients-button`) {
-      return `ინგრედიენტები
+      return `${curLang === "geo" ? "ინგრედიენტები" : "ingredients"}
           <svg viewBox="0 0 448 512">
             <use href="${icons}#icon-arrow"></use>
           </svg>`;
     }
   }
   _generateInfo(data) {
-    return data.info.reduce((acc, info) => acc + `<p>${info}</p>`, ``);
+    return data.info[this._data.language.current].reduce(
+      (acc, info) => acc + `<p>${info}</p>`,
+      ``
+    );
   }
   _addEventRotate() {
     this._parentEl.addEventListener("click", function (e) {

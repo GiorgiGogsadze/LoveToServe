@@ -7,7 +7,7 @@ const HeaderNavView = class extends View {
     this._addEventScroll();
   }
   _generateMarkup() {
-    return this._data.reduce(
+    return this._data.items.reduce(
       (acc, data) =>
         acc +
         `<li class="header__item">
@@ -21,7 +21,9 @@ const HeaderNavView = class extends View {
                   alt="${data.title}"
                   class="hidden-img"
                 />
-                <h3 class="heading-3 header__item-name">${data.name}</h3>
+                <h3 class="heading-3 header__item-name">${
+                  data.name[this._data.lang]
+                }</h3>
               </div></a
             >
           </li>`,

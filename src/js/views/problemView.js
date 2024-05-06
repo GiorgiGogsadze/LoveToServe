@@ -18,7 +18,7 @@ const ProblemView = class {
       const problem = Object.fromEntries(dataArr);
       handler(problem);
       PopupView._closePopFunc(this._parentOfParent, this._parentEl);
-      this._problemForm.querySelector("#name").value = "";
+      // this._problemForm.querySelector("#name").value = "";
       this._problemForm
         .querySelectorAll(".problem-level")
         .forEach((el) => (el.checked = false));

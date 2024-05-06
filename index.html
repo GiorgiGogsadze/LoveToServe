@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>LoveToServe</title>
     <link rel="icon" type="image/x-icon" href="./src/img/favicon-32x32.png" />
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,6 +38,7 @@
           class="table-input"
           title="table"
         ></select>
+        <select name="lang" id="lang" class="lang-input" title="lang"></select>
       </div>
       <nav class="header__nav">
         <ul class="header__list"></ul>
@@ -46,8 +47,8 @@
         <span
           class="order-table__opener-notification"
           style="display: none"
-        ></span
-        >ნახეთ შეკვეთა
+        ></span>
+        <span id="seeOrder">ნახეთ შეკვეთა</span>
       </button>
     </header>
     <div class="home"></div>
@@ -60,10 +61,7 @@
         />
         <p class="footer__name">LoveToServe</p>
       </div>
-      <p class="footer__copy">
-        &copy; საიტი ეკუთვნის გიორგი გოგსაძეს, ნებადართულია მისი გადაკეთება
-        მხოლოდ იმ შემთხვევაში, თუ მიუთითებთ ავტორს.
-      </p>
+      <p class="footer__copy">&copy; საიტი ეკუთვნის გიორგი გოგსაძეს.</p>
       <div class="footer__down">
         <div class="footer__problem">
           <p class="footer__problem__text">პრობლემის შეტყობინება</p>
@@ -73,9 +71,9 @@
           <p class="react__text">დაწერე შეფასება</p>
         </div>
         <div class="facebook">
-          <p class="facebook__text">დაგვიმეგობრდი ფეისბუქზე</p>
+          <p class="facebook__text">გვნახე ფეისბუქზე</p>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/giorgi.gogsadze.14811/"
             class="facebook__link"
             target="_blank"
           >
@@ -111,9 +109,12 @@
             />
           </div>
           <p class="total-price">
-            ფასი: <span class="total-price__number"></span> ლარი
+            <span id="mp">ფასი:</span>
+            <span class="total-price__number"></span> ₾
           </p>
-          <button class="end-button"><span>შეკვეთებში დამატება</span></button>
+          <button class="end-button">
+            <span id="madd">შეკვეთებში დამატება</span>
+          </button>
         </form>
       </div>
     </div>
@@ -126,7 +127,7 @@
         </svg>
         <h4 class="heading-4 form-popup__header">პრობლემის შეტყობინება</h4>
         <form action="" class="form-popup__form">
-          <div class="form-popup__about">
+          <!-- <div class="form-popup__about">
             <input
               type="text"
               name="name"
@@ -134,7 +135,7 @@
               placeholder="სახელი, გვარი"
               required
             />
-          </div>
+          </div> -->
           <div class="form-popup__problems">
             <p class="form-popup__problem">პრობლემის ხარისხი:</p>
             <div class="form-popup__select">

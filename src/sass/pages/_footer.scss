@@ -24,7 +24,7 @@
     margin: 3rem auto 2rem auto;
     color: #e0dfee;
     text-shadow: 0 0 1rem #000;
-    font-family: none;
+    font-family: Helvetica;
     font-weight: 600;
   }
   &__down {
@@ -36,7 +36,7 @@
     cursor: pointer;
     &__text {
       font-size: 1.4rem;
-      font-family: none;
+      font-family: Helvetica;
       color: var(--color-grey-1);
     }
     &:hover {
@@ -115,7 +115,7 @@
   }
   &__text {
     font-size: 1.4rem;
-    font-family: none;
+    font-family: Helvetica;
     color: var(--color-grey-1);
     cursor: default;
   }
@@ -128,7 +128,7 @@
   &__text {
     color: var(--color-grey-1);
     font-size: 1.4rem;
-    font-family: none;
+    font-family: Helvetica;
     width: 60%;
     text-align: end;
     cursor: default;

@@ -49,7 +49,7 @@ html {
 }
 
 body {
-  font-family: "parizuli-reg";
+  font-family: "parizuli-reg", Helvetica;
   // color: var(--color-grey-1);
 }
 .logo {
@@ -57,7 +57,7 @@ body {
   border-radius: 50%;
 }
 .container {
-  font-family: none;
+  font-family: Helvetica;
   display: flex;
   justify-content: center;
   align-items: center;

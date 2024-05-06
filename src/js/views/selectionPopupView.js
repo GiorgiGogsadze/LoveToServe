@@ -26,9 +26,9 @@ const SelectionPopupView = class extends View {
   }
   _generateButton() {
     if (this._data.btn === `card-button`) {
-      return `შეუკვეთე ახლავე`;
+      return this._data.lang === "geo" ? `შეუკვეთე ახლავე` : `Order Now`;
     } else if (this._data.btn === `ingredients-button`) {
-      return `ინგრედიენტები
+      return `${this._data.lang === "geo" ? "ინგრედიენტები" : `ingredients`}
           <svg viewBox="0 0 448 512">
             <use href="${icons}#icon-arrow"></use>
           </svg>`;
@@ -42,7 +42,7 @@ const SelectionPopupView = class extends View {
           name="${this._data.title}-types"
           class="selection-types"
           id="${this._data.title}-type-${i + 1}"
-          data-name = "${sel.name}"
+          data-name = "${sel.name[this._data.lang]}"
           data-price ="${sel.price}"
           required
         />
@@ -51,9 +51,9 @@ const SelectionPopupView = class extends View {
             src=${sel.image}
           />
           <div class="types-container__btn">
-            ${sel.name}
+            ${sel.name[this._data.lang]}
             <br />
-            ${sel.price}ლ.
+            ${sel.price}₾.
           </div>
         </label>
       </div>`;
