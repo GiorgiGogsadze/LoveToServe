@@ -73,6 +73,10 @@ const controlRenderSelPopup = function (name) {
 };
 const innit = function () {
   if (model.state.language.current !== "geo") translate();
+  else
+    document.querySelector(
+      ".footer__copy"
+    ).textContent = `საიტი შექმნილია პირადი მიზნებისთვის. მოცემული ინფორმაცია ყალბია. ©${new Date().getFullYear()} გიორგი გოგსაძე.`;
   tableView.render(model.state.table);
   tableView.addHandlerChange(controlTable);
   languageView.render(model.state.language);

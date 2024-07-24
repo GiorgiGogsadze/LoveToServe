@@ -1,10 +1,10 @@
-import * as model from "./model";
 export default function translate() {
   document.querySelector(".header__heading--2").textContent =
     "Don't wait for the waiter, order now";
   document.querySelector("#seeOrder").textContent = "See Orders";
-  document.querySelector(".footer__copy").textContent =
-    "© The Website belongs to Giorgi Gogsadze";
+  document.querySelector(
+    ".footer__copy"
+  ).textContent = `The website is developed for personal purposes. Provided information is fictitious. ©${new Date().getFullYear()} by Giorgi Gogsadze.`;
   document.querySelector(".footer__problem__text").textContent =
     "Report Problem";
   document.querySelector(".react__text").textContent = "Rate us";
