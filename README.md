@@ -7,7 +7,7 @@ _The project was created for personal portfolio of Giorgi Gogsadze in Summer 202
 
 ## Technical Side
 
-The program code for project is written in **Vanilla Javascript**, and is powered by **Parcel** bundler. The primary focus of the project lies in creating an concise user interface and make overall user experience desirable. So the main goal of the project was to create the front end side of The website. The website is predominantly built using object-oriented programming principles and **SCSS** for responsive and unique design with pleasant animations and transations. For efficient data management, the project adopts **Centralized State Store Strategy**.
+The program code for project is written in **Vanilla Javascript**, and is powered by **Parcel** bundler. The primary focus of the project lies in creating an concise user interface and make overall user experience desirable. So the main goal of the project was to create the front end side of The website. The website is predominantly built using object-oriented programming principles and **SCSS** for responsive and unique design with pleasant animations and transitions. For efficient data management, the project adopts **Centralized State Store Strategy**.
 
 ## Description
 >[!NOTE]
