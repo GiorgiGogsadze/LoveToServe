@@ -76,7 +76,7 @@ const innit = function () {
   else
     document.querySelector(
       ".footer__copy"
-    ).textContent = `საიტი შექმნილია პირადი მიზნებისთვის. მოცემული ინფორმაცია ყალბია. ©${new Date().getFullYear()} გიორგი გოგსაძე.`;
+    ).textContent = `©${new Date().getFullYear()} გიორგი გოგსაძე. საიტი შექმნილია პირადი მიზნებისთვის. მოცემული ინფორმაცია ყალბია.`;
   tableView.render(model.state.table);
   tableView.addHandlerChange(controlTable);
   languageView.render(model.state.language);

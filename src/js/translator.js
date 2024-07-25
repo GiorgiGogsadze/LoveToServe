@@ -4,7 +4,7 @@ export default function translate() {
   document.querySelector("#seeOrder").textContent = "See Orders";
   document.querySelector(
     ".footer__copy"
-  ).textContent = `The website is developed for personal purposes. Provided information is fictitious. ©${new Date().getFullYear()} by Giorgi Gogsadze.`;
+  ).textContent = `©${new Date().getFullYear()} by Giorgi Gogsadze. The website is developed for personal purposes. Provided information is fictitious.`;
   document.querySelector(".footer__problem__text").textContent =
     "Report Problem";
   document.querySelector(".react__text").textContent = "Rate us";
